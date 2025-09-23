@@ -22,7 +22,7 @@ export async function middleware(request: NextRequest) {
     !token &&
     (url.pathname.startsWith("/dashboard") || url.pathname.startsWith("/verify"))
   ) {
-    return NextResponse.redirect(new URL('/', request.url))
+    return NextResponse.redirect(new URL("/sign-in", request.url));
   }
 
   // Otherwise, allow request
