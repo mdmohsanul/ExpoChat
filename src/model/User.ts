@@ -5,17 +5,17 @@ export interface Message extends Document{
     createdAt :Date
 }
 
-const MessageSchema:Schema<Message> = new Schema({
-  content:{
-    type:String,
-     required:true
+export const MessageSchema: Schema<Message> = new Schema({
+  content: {
+    type: String,
+    required: true,
   },
-  createdAt:{
-    type:Date,
-    required:true,
-    default:Date.now
-  }
-})
+  createdAt: {
+    type: Date,
+    required: true,
+    default: Date.now,
+  },
+});
 
 export interface User extends Document{
    username:string;
